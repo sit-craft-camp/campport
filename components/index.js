@@ -1,7 +1,3 @@
-import React from 'react'
+import CardCamp from './card'
 
-export const Index = () => (
-  <div>this is react nextjs</div>
-)
-
-export default Index
+export {CardCamp}
