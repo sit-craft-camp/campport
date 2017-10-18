@@ -24,10 +24,14 @@ export default class MyDocument extends Document {
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
           <link rel='stylesheet' href='/static/css/bootstrap.min.css' />
+          <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
         </Head>
         <body>
           <Main />
           <NextScript />
+          
         </body>
       </html>
     )

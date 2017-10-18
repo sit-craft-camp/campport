@@ -5,7 +5,7 @@ import Component from '../components/'
 export const Index = () => (
   <div>
     <Component />
-    <Carousel/>
+    {<Carousel/>}
   </div>
 )
 
