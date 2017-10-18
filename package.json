@@ -1,0 +1,33 @@
+{
+  "name": "campport",
+  "version": "1.0.0",
+  "description": "Bob Team SIT CRAFT Camp project",
+  "main": "server.js",
+  "repository": "https://github.com/sit-craft-camp/campport.git",
+  "author": "kittipong srikittichai <kittipong.sri@mail.kmutt>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "next": "^4.1.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "reactstrap": "^4.8.0"
+  },
+  "devDependencies": {
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^4.9.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-config-standard-react": "^5.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.4.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "stats-webpack-plugin": "^0.6.1"
+  },
+  "scripts": {
+    "dev": "node server.js",
+    "build": "NODE_ENV=production next build",
+    "start": "NODE_ENV=production node server.js"
+  }
+}
