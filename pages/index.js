@@ -1,9 +1,12 @@
 import React from 'react'
-import Component from '../components/'
+// import Component from '../components/'
+// import Navbar from '../components/Navbar'
+
 
 export const Index = () => (
-  <div>
-    <Component />
+  <div> x
+    {/* <Navbar />
+    <Component /> */}
   </div>
 )
 

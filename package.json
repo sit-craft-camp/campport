@@ -13,6 +13,7 @@
     "react-dom": "^16.0.0",
     "react-transition-group": "^2.2.1",
     "reactstrap": "^4.8.0",
+    "regjsgen": "^0.3.0",
     "styled-components": "^2.2.1"
   },
   "devDependencies": {
