@@ -1,13 +1,9 @@
 import React from 'react'
-import QuestionCard from '../components/QuestionCard'
+import HeroImage from '../components/HeroImage'
 
 export const Index = () => (
   <div>
-    <QuestionCard 
-      question="1.วิวพงษ์ออร์เดอร์ดีลเลอร์ ฮ็อตออร์แกนิก เยอร์บีร่าโฟนยิวลาเต้ โฟมฟอยล์ ทริปเวสต์บุ๋นแมกกาซีน เอ็นเตอร์เทนเป่ายิงฉุบเทอร์โบคาแร็คเตอร์โฮม ฮวงจุ้ยโซนี่คาราโอเกะบอยคอตต์ โพลารอยด์ ใช้งานอาร์ติสต์แซนด์วิช" 
-      questionid="sit-craft-camp-1" 
-      rows="5" 
-      questionType="normal" />
+    <HeroImage src="https://pixabay.com/get/eb3db30c21f0083ed65e4518a34e4796e077e5d004b014419df3c87fa1e8b7/seemed-2823949_640.jpg" />
   </div>
 )
 
