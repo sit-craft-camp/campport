@@ -22,7 +22,7 @@ pipeline{
 		sh 'echo "Step : Development."'
 		//Start Dev
 		sh 'echo "Development - Starting Service"'
-		sh 'pm2 start yarn --name "campport-3000"'
+		sh 'pm2 start yarn'
 	  }
     }
    	stage('production'){
@@ -30,7 +30,7 @@ pipeline{
 		sh 'echo "Step : Production."'
 		//Delete Service
 		sh 'echo "Production - Deleting Service"'
-		sh 'pm2 delete --name "campport-3000"'
+		sh 'pm2 delete yarn'
 	  }
     }
   }
