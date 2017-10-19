@@ -22,7 +22,7 @@ pipeline{
     }
    	stage('development'){
 	  steps{
-		sh 'echo "Step : Development"'
+		sh 'echo "Step : Development."'
 		//Delete Service
 		sh 'echo "Development - Deleting Service"'
 		sh 'pm2 delete --name "campport-3000" : '
