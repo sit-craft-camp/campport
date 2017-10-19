@@ -10,9 +10,6 @@ pipeline{
 		//build
 		sh 'echo "Build - Building"'
 		sh 'yarn build'
-		//start
-		sh 'echo "Build - Starting"'
-		sh 'yarn start'
 	  }
     }
    	stage('test'){
@@ -33,7 +30,10 @@ pipeline{
     }
    	stage('production'){
 	  steps{
-		sh 'echo "Production."'
+		sh 'echo "Step : Production."'
+		//Delete Service
+		sh 'echo "Production - Killing Service"'
+		sh 'pm2 kill --name "campport-3000" : '
 	  }
     }
   }
