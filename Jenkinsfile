@@ -20,9 +20,6 @@ pipeline{
    	stage('development'){
 	  steps{
 		sh 'echo "Step : Development."'
-		//Delete Service
-		sh 'echo "Development - Deleting Service"'
-		sh 'pm2 delete --name "campport-3000" : '
 		//Start Dev
 		sh 'echo "Development - Starting Service"'
 		sh 'pm2 start yarn --name "campport-3000"'
@@ -32,8 +29,8 @@ pipeline{
 	  steps{
 		sh 'echo "Step : Production."'
 		//Delete Service
-		sh 'echo "Production - Killing Service"'
-		sh 'pm2 kill --name "campport-3000" : '
+		sh 'echo "Production - Deleting Service"'
+		sh 'pm2 delete --name "campport-3000"'
 	  }
     }
   }
