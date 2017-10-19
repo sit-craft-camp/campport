@@ -13,7 +13,7 @@ export default class QuestionCard extends React.Component {
                       { this.props.question }
                     </label>
                     {
-                      this.props.questionType === "normal" ? <textarea className="form-control" id={ this.props.questionId } rows={ this.props.row } /> : <input type="file" className="form-control-file" id={ this.props.questionId } />
+                      this.props.questionType === "normal" ? <textarea className="form-control" id={ this.props.questionId } rows={ this.props.rows } /> : <input type="file" className="form-control-file" id={ this.props.questionId } />
                     }
                   </div>
                 </form>
