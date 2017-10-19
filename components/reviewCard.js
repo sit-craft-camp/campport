@@ -1,52 +1,32 @@
 import React from 'react'
 import style,{injectGlobal} from 'styled-components'
 
-injectGlobal([`
-    *{
-        border:#000 solid thin;
-    }
-`])
-
-const MainCard = style.div`
-    display:flex;
-    flex-direction:column;
-    padding:10px;
-`
-const MainCardHead = style.div`
+const HeadCard = style.div`
     display:flex;
     flex-direction:row;
-    flex:1;
 `
-const MainCardImage = style.div`
-    flex:1;
-`
-const MainCardHeadDetail = style.div`
-    flex:4;
-    display:flex;
-    flex-direction:column;
-`
-const MainCardBody = style.div`
-    flex:1;
-    padding:5px;
+
+const FlexItem = style.div`
+    flex:${props => props.flex}
 `
 
 export default class ReviewCard extends React.Component {
     render(){
         return(
-            <MainCard>
-                <MainCardHead>
-                    <MainCardImage>
-                        <img width={80} src={this.props.userImage} alt=""/>    
-                    </MainCardImage> 
-                    <MainCardHeadDetail>
-                        <div>{this.props.userName}</div>
-                        <div>{this.props.star}</div>    
-                    </MainCardHeadDetail>         
-                </MainCardHead>
-                <MainCardBody>
-                    {this.props.comment}
-                </MainCardBody>
-            </MainCard>
+            <div className="card" style={{width:'20rem'}} >
+            <div className="card-body">
+                <HeadCard>
+                    <FlexItem flex={1} >
+                        <img src={this.props.userImage} alt="" width={50} className="rounded-circle" />
+                    </FlexItem>
+                    <FlexItem flex={4} >
+                        <h4 className="card-title">{this.props.userName}</h4>
+                        <h6 className="card-subtitle mb-2 text-muted">{this.props.date}</h6>
+                    </FlexItem>
+                </HeadCard>
+              <p className="card-text">{this.props.comment}</p>
+            </div>
+          </div>
         )
     }
 }
