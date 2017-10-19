@@ -15,6 +15,12 @@ const Carousel = () => (
                 <div className="carousel-item active">
                     <img className="d-block w-100" src="/static/camphub.jpg" alt="First slide"/>
                 </div>
+                 <div>
+                    <div className="carousel-caption d-none d-md-block">
+                        <h3>CAMPPORT</h3>
+                        <p>this campport to word</p>
+                    </div>
+                </div>
                 <div className="carousel-item">
                     <img className="d-block w-100" src="/static/CampHUB-pormo-01.jpg" alt="Second slide"/>
                 </div>
