@@ -18,8 +18,11 @@ export default class Example extends React.Component {
   render () {
     return (
       <div>
-        <Navbar color='faded' light expand='md'>
-          <NavbarBrand href='/'>reactstrap</NavbarBrand>
+        <Navbar className="MainNavbar" color='faded' light expand='md'>
+          <NavbarBrand href='/'>
+            <img width={200}  src = "/static/Untitled-1.png" />
+          
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className='ml-auto' navbar>
@@ -28,6 +31,9 @@ export default class Example extends React.Component {
               </NavItem>
               <NavItem>
                 <NavLink href='https://github.com/reactstrap/reactstrap'>Github</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href='/profile'>Profile</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
