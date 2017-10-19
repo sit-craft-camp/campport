@@ -18,4 +18,6 @@ export default class RequirementCard extends React.Component {
     }
 }
 
-RequirementCard.prop
+RequirementCard.propTypes = {
+    requirement: PropTypes.array.isRequired
+}
