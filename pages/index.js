@@ -1,12 +1,17 @@
 import React from 'react'
-// import Component from '../components/'
-// import Navbar from '../components/Navbar'
+import Head from 'next/head'
 
+// import Component from '../components/'
+import Navbar from '../components/Navbar'
+import Gallery from '../components/Gallery'
 
 export const Index = () => (
-  <div> x
-    {/* <Navbar />
-    <Component /> */}
+  <div> 
+    <Head>
+      <link rel="stylesheet" href="/static/style.css"/>
+    </Head> 
+    <Navbar />
+    <Gallery />
   </div>
 )
 
