@@ -3,34 +3,39 @@ pipeline{
   stages {
 	stage('build'){
 	  steps{
-		sh 'echo "Step : Build"'
+	  	sh 'echo "=================================================="'
+		sh 'echo "============= [ Step : Build ] ==================="'
 		//intall
-		sh 'echo "Build - Installing"'
+		sh 'echo "============= [ Build - Installing ] ============="'
 		sh 'yarn install'
 		//build
-		sh 'echo "Build - Building"'
+		sh 'echo "============= [ Build - Building ] ==============="'
 		sh 'yarn build'
+		sh 'echo "=================================================="'
 	  }
     }
    	stage('test'){
 	  steps{
-		sh 'echo "Test passed"'	  
+		sh 'echo "============= [ Test passed ] ============="'	  
+		sh 'echo "==========================================="'
 	  }
     }
    	stage('development'){
 	  steps{
-		sh 'echo "Step : Development."'
+		sh 'echo "=================== [ Step : Development. ] ===================="'
 		//Start Dev
-		sh 'echo "Development - Starting Service"'
+		sh 'echo "============== [ Development - Starting Service ] =============="'
 		sh 'pm2 start yarn'
+		sh 'echo "================================================================"'
 	  }
     }
    	stage('production'){
 	  steps{
-		sh 'echo "Step : Production."'
+		sh 'echo "============= [ Step : Production. ] ========================"'
 		//Delete Service
-		sh 'echo "Production - Deleting Service"'
+		sh 'echo "============= [ Production - Deleting Service ] ============="'
 		sh 'pm2 delete yarn'
+		sh 'echo "============================================================="'
 	  }
     }
   }
