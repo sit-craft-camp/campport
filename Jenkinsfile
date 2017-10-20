@@ -37,6 +37,8 @@ pipeline{
 	  steps{
 		sh 'echo "============= [ Step : Production. [4/4] ] ===================================="'
 		//Delete Service
+		sh 'echo "============= [ Production [4/4] - Put web under maintenance ] ================"'
+		sh 'ssh bob-site@webserver-prod "mv /var/www/maintenance_off.html /var/www/maintenance_on.html"'
 		sh 'echo "============= [ Production [4/4] - Deleteing old project ] ===================="'
 		sh 'ssh bob-site@webserver-prod "pm2 delete CAMPPORT || :"'
 		sh 'echo "============= [ Production [4/4] - Stoping Old Production ] ==================="'
@@ -45,6 +47,8 @@ pipeline{
 		sh 'scp -r . bob-site@webserver-prod:/home/bob-site/campport '
 		sh 'echo "============= [ Production [4/4] - Starting Server ] =========================="'
 		sh 'ssh bob-site@webserver-prod "cd /home/bob-site/campport && pm2 start npm --name CAMPPORT -- start "'
+		sh 'echo "============= [ Production [4/4] - Put web to normal op] ======================"'
+		sh 'ssh bob-site@webserver-prod "mv /var/www/maintenance_on.html /var/www/maintenance_off.html"'
 		sh 'echo "==============================================================================="'
 	  }
     }
