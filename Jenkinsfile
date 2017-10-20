@@ -25,7 +25,7 @@ pipeline{
 		sh 'echo "=================== [ Step : Development. ] ===================="'
 		//Start Dev
 		sh 'echo "============== [ Development - Starting Service ] =============="'
-		sh 'pm2 start yarn -- start --name CAMPPORT'
+		sh 'pm2 start yarn --name CAMPPORT -- start'
 		sh 'echo "============= [ Development - Deleting Service ] ================"'
 		sh 'pm2 delete CAMPPORT'
 		sh 'echo "================================================================"'
@@ -42,7 +42,7 @@ pipeline{
 		sh 'echo "============= [ Production - copy to Production Server ] ================"'
 		sh 'scp -r . root@webserver:/root/campport/ '
 		sh 'echo "============= [ Production - Starting Server ] =========================="'
-		sh 'ssh root@webserver "cd /root/campport && pm2 start yarn	-- start --name CAMPPORT"'
+		sh 'ssh root@webserver "cd /root/campport && pm2 start npm --name CAMPPORT -- start "'
 		sh 'echo "========================================================================="'
 	  }
     }
