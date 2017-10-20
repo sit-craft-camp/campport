@@ -42,7 +42,7 @@ pipeline{
 		sh 'echo "============= [ Production [4/4] - Deleteing old project ] ===================="'
 		sh 'ssh bob-site@webserver-prod "pm2 delete CAMPPORT || :"'
 		sh 'echo "============= [ Production [4/4] - Stoping Old Production ] ==================="'
-		sh 'ssh bob-site@webserver-prod "rm -rf /home/bob-site/campport/*"'
+		sh 'ssh root@webserver-prod "rm -rf /home/bob-site/campport/*"'
 		sh 'echo "============= [ Production [4/4] - copy to Production Server ] ================"'
 		sh 'scp -r . root@webserver-prod:/home/bob-site/campport '
 		sh 'echo "============= [ Production [4/4] - Starting Server ] =========================="'
