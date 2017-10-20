@@ -21,7 +21,7 @@ const Photoset = [
 
 const Gallery = () => (
     <div> 
-        <PhotoGallery photos={Photoset} />
+        <PhotoGallery photos={ Photoset } />
     </div>
 )
 export default Gallery
