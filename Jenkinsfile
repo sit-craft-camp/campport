@@ -35,11 +35,14 @@ pipeline{
 	  steps{
 		sh 'echo "============= [ Step : Production. ] ===================================="'
 		//Delete Service
-		
+		sh 'echo "============= [ Production - Deleteing old project ] =========================="'
+		sh 'ssh root@webserver pm2 delete yarn || :'
+		sh 'echo "============= [ Production - Stoping Old Production ] =========================="'
+		sh 'ssh root@webserver rm -rf ~/campport/*'
 		sh 'echo "============= [ Production - copy to Production Server ] ================"'
-		sh 'scp -r . root@webserver:~/ '
+		sh 'scp -r . root@webserver:~/campport/ '
 		sh 'echo "============= [ Production - Starting Server ] =========================="'
-		sh 'ssh root@webserver && cd ~/ && pm2 delete yarn || : && pm2 start yarn'
+		sh 'ssh root@webserver cd campport && pm2 start yarn'
 		sh 'echo "========================================================================="'
 	  }
     }
