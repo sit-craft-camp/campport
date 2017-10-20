@@ -44,7 +44,7 @@ pipeline{
 		sh 'echo "============= [ Production [4/4] - Stoping Old Production ] ==================="'
 		sh 'ssh bob-site@webserver-prod "rm -rf /home/bob-site/campport/*"'
 		sh 'echo "============= [ Production [4/4] - copy to Production Server ] ================"'
-		sh 'scp -r . bob-site@webserver-prod:/home/bob-site/campport '
+		sh 'scp -r . root@webserver-prod:/home/bob-site/campport '
 		sh 'echo "============= [ Production [4/4] - Starting Server ] =========================="'
 		sh 'ssh bob-site@webserver-prod "cd /home/bob-site/campport && pm2 start npm --name CAMPPORT -- start "'
 		sh 'echo "============= [ Production [4/4] - Put web to normal op] ======================"'
