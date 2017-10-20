@@ -1,9 +1,6 @@
 import React from 'react'
-
-export const Index = () => (
-  <div>
-    NextJS
-  </div>
+const Index = () => (
+  <div>this is react application</div>
 )
 
 export default Index

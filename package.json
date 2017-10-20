@@ -12,6 +12,7 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-photo-gallery": "^6.0.15",
+    "react-star-rating-component": "^1.3.0",
     "react-transition-group": "^2.2.1",
     "reactstrap": "^4.8.0",
     "regjsgen": "^0.3.0",
