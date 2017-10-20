@@ -1,10 +1,9 @@
-import ReviewCard from './reviewCard'
-import Review from './review'
-import ReviewCard from './reviewCard/reviewCard'
-import FooterComponent from './FooterComponent/footer'
+import React from 'react'
 
-export {
-  ReviewCard,
-  Review,
-  FooterComponent
-}
+export const Index = () => (
+  <div>
+    Hello World
+  </div>
+)
+
+export default Index
