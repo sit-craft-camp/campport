@@ -1,10 +1,6 @@
 import React from 'react'
-import Component from '../components/'
-
-export const Index = () => (
-  <div>
-    <Component />
-  </div>
+const Index = () => (
+  <div>this is react application</div>
 )
 
 export default Index
