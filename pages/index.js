@@ -1,9 +1,9 @@
 import React from 'react'
-import Component from '../components/'
+import RequirementCard from '../components/RequirementCard'
 
 export const Index = () => (
   <div>
-    <Component />
+    <RequirementCard requirements={["ม.5-6","สายการเรียน วิทย์-คณิต"]} />
   </div>
 )
 
