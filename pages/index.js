@@ -1,11 +1,12 @@
 import React from 'react'
 import Carousel from '../components/Carousel'
-import Component from '../components/'
+import Questioncards from '../components/Questioncard'
 
 export const Index = () => (
   <div>
-    <Component />
+    
     {<Carousel/>}
+    {<Questioncards/>}
   </div>
 )
 

@@ -17,7 +17,7 @@ const Carousel = () => (
                 </div>
                  <div>
                     <div className="carousel-caption d-none d-md-block">
-                        <h3>CAMPPORT</h3>
+                        <h1>CAMPPORT</h1>
                         <p>this campport to word</p>
                     </div>
                 </div>
