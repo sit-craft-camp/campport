@@ -1,7 +1,5 @@
-import React from 'react'
+import FooterComponent from './FooterComponent/footer'
 
-export const Index = () => (
-  <div>this is react nextjs</div>
-)
-
-export default Index
+export {
+  FooterComponent
+}
