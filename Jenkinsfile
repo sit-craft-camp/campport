@@ -42,7 +42,7 @@ pipeline{
 		sh 'echo "============= [ Production - copy to Production Server ] ================"'
 		sh 'scp -r . root@webserver:/root/campport/ '
 		sh 'echo "============= [ Production - Starting Server ] =========================="'
-		sh 'ssh root@webserver cd /root/campport ; pm2 start yarn'
+		sh 'ssh root@webserver "cd /root/campport && pm2 start yarn"'
 		sh 'echo "========================================================================="'
 	  }
     }
