@@ -38,13 +38,13 @@ pipeline{
 		sh 'echo "============= [ Step : Production. ] ===================================="'
 		//Delete Service
 		sh 'echo "============= [ Production - Deleteing old project ] =========================="'
-		sh 'ssh root@webserver-prod "pm2 delete CAMPPORT || :"'
+		sh 'ssh bob-site@webserver-prod "pm2 delete CAMPPORT || :"'
 		sh 'echo "============= [ Production - Stoping Old Production ] =========================="'
-		sh 'ssh root@webserver-prod "rm -rf /root/campport/*"'
+		sh 'ssh bob-site@webserver-prod "rm -rf /home/bob-site/*"'
 		sh 'echo "============= [ Production - copy to Production Server ] ================"'
-		sh 'scp -r . root@webserver-prod:/root/campport/ '
+		sh 'scp -r . bob-site@webserver-prod:/home/bob-site/ '
 		sh 'echo "============= [ Production - Starting Server ] =========================="'
-		sh 'ssh root@webserver-prod "cd /root/campport && pm2 start npm --name CAMPPORT -- start "'
+		sh 'ssh bob-site@webserver-prod "cd /home/bob-site && pm2 start npm --name CAMPPORT -- start "'
 		sh 'echo "========================================================================="'
 	  }
     }
