@@ -38,7 +38,7 @@ pipeline{
 		sh 'echo "============= [ Step : Production. [4/4] ] ===================================="'
 		//Delete Service
 		sh 'echo "============= [ Production [4/4] - Put web under maintenance ] ================"'
-		sh 'ssh bob-site@webserver-prod "mv /var/www/maintenance_off.html /var/www/maintenance_on.html"'
+		sh 'ssh bob-site@webserver-prod "mv /var/www/maintenance_off.html /var/www/maintenance_on.html || :"'
 		sh 'echo "============= [ Production [4/4] - Deleteing old project ] ===================="'
 		sh 'ssh bob-site@webserver-prod "pm2 delete CAMPPORT || :"'
 		sh 'echo "============= [ Production [4/4] - Stoping Old Production ] ==================="'
