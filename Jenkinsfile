@@ -37,7 +37,8 @@ pipeline{
 		//Delete Service
 		
 		sh 'echo "============= [ Production - copy to Production Server ] ================"'
-		sh 'scp -r . root@webserver:~/'
+		sh 'scp -r . root@webserver:~/ '
+		sh 'ssh root@webserver && cd ~/campport/ && sudo pm2 delete yarn && sudo pm2 start yarn'
 		sh 'echo "========================================================================="'
 	  }
     }
