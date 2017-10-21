@@ -1,19 +1,16 @@
 import React from 'react'
-import styled from 'styled-components'
+import { ReviewCard } from './ReviewCard'
+import style, { injectGlobal } from 'styled-components'
 
-const ReviewContent = styled.div`
-    padding:5px;
-    display:flex;
-    flex-direction:column;
-`
-
-export default class ReviewCon extends React.Component{
+export default class Review extends React.Component {
     render(){
-        const { reviewData,ReviewCard } = this.props
         return(
-            <ReviewContent>
-                {reviewData.map((data)=><ReviewCard {...data} /> )}
-            </ReviewContent>
+            <div>
+            <center><ReviewCard date="14 oct 2017" userImage="https://scontent.fbkk14-1.fna.fbcdn.net/v/t1.0-9/22195377_1725635537741020_6828151920495242605_n.jpg?oh=316e6494728d85233f8a6201706da18c&oe=5A6D7D97" userName="DOMMIE" star={4} comment="Hello It's me" /></center>
+            <center><ReviewCard date="16 oct 2017" userImage="https://scontent.fbkk14-1.fna.fbcdn.net/v/t1.0-9/22195377_1725635537741020_6828151920495242605_n.jpg?oh=316e6494728d85233f8a6201706da18c&oe=5A6D7D97" userName="DOMMIE" star={4} comment="Hello It's me" /></center>
+            <center><ReviewCard date="18 oct 2017" userImage="https://scontent.fbkk14-1.fna.fbcdn.net/v/t1.0-9/22195377_1725635537741020_6828151920495242605_n.jpg?oh=316e6494728d85233f8a6201706da18c&oe=5A6D7D97" userName="DOMMIE" star={4} comment="Hello It's me" /></center>
+            <center><button type="button" className="btn btn-warning btn-lg">Read more</button></center>
+            </div>
         )
     }
 }
