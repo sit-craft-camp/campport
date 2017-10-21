@@ -7,7 +7,6 @@ export default class QuestionCard extends React.Component {
       return (
         <div className='card' style={{width: '40rem'}}>
           <div className='card-body'>
-                <form>
                   <div className="form-group">
                     <label for={ this.props.questionId }>
                       { this.props.question }
@@ -16,7 +15,6 @@ export default class QuestionCard extends React.Component {
                       this.props.questionType === "normal" ? <textarea className="form-control" id={ this.props.questionId } rows={ this.props.rows } /> : <input type="file" className="form-control-file" id={ this.props.questionId } />
                     }
                   </div>
-                </form>
             </div>
         </div>
       )

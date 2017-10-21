@@ -14,7 +14,7 @@ const FlexItem = style.div`
 export default class ReviewCard extends React.Component {
     render(){
         return(
-            <div className="card" style={{width:'20rem'}} >
+            <div className="card" style={{width:'100%',marginBottom:10}} >
             <div className="card-body">
                 <HeadCard>
                     <FlexItem flex={1} >
@@ -22,7 +22,7 @@ export default class ReviewCard extends React.Component {
                     </FlexItem>
                     <FlexItem flex={3} >
                         <h5 className="card-title">{this.props.userName}</h5>
-                        <h6 className="card-subtitle mb-2 text-muted"><StarRatingComponent starCount={5} value={this.props.star} /></h6>
+                        <h6 className="card-subtitle mb-2 text-muted"><StarRatingComponent editing={false} starCount={5} value={this.props.star} /></h6>
                     </FlexItem>
                 </HeadCard>
               <p className="card-text">{this.props.comment}</p>
